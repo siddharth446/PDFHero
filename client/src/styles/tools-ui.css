@@ -1,0 +1,170 @@
+/* Scope everything to PDFHero UI classes only (no body/html overrides) */
+
+.ph-heroWrap{
+  padding: 42px 16px 10px;
+}
+
+.ph-hero{
+  margin: 0 auto;
+  width: min(1100px, 100%);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 22px;
+  background: radial-gradient(900px 320px at 20% 0%, rgba(124,58,237,.22), transparent 60%),
+              radial-gradient(850px 320px at 80% 10%, rgba(6,182,212,.18), transparent 55%),
+              linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  position: relative;
+}
+
+.ph-heroInner{
+  padding: 22px 18px;
+}
+
+.ph-title{
+  margin: 0 0 8px;
+  font-size: clamp(26px, 3.2vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: rgba(255,255,255,.92);
+}
+
+.ph-sub{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.70);
+  line-height: 1.5;
+}
+
+/* Search */
+.ph-search{ width: min(820px, 100%); }
+
+.ph-searchBar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(10,14,25,.35);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 44px rgba(0,0,0,.25);
+}
+
+.ph-searchIcon{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.85);
+}
+
+.ph-searchInput{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  font-size: 15px;
+}
+
+.ph-searchInput::placeholder{
+  color: rgba(255,255,255,.45);
+}
+
+.ph-kbd{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.70);
+  background: rgba(0,0,0,.18);
+}
+
+/* Results dropdown */
+.ph-results{
+  margin-top: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(10,14,25,.55);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(0,0,0,.35);
+}
+
+.ph-resultItem{
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.92);
+}
+
+.ph-resultItem:hover,
+.ph-resultItem.isActive{
+  background: rgba(255,255,255,.08);
+}
+
+.ph-resultTitle{ font-weight: 700; font-size: 14.5px; }
+.ph-resultDesc{ margin-top: 4px; font-size: 12.5px; color: rgba(255,255,255,.65); }
+
+/* Grid */
+.ph-section{
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 18px 16px 72px;
+}
+
+.ph-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.ph-card{
+  grid-column: span 4;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+  box-shadow: 0 18px 55px rgba(0,0,0,.25);
+  backdrop-filter: blur(12px);
+  padding: 16px;
+  cursor: pointer;
+  color: rgba(255,255,255,.92);
+  text-align: left;
+  transform-style: preserve-3d;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.ph-card:hover{
+  transform: translateY(-3px) rotateX(1.8deg) rotateY(-1.6deg);
+  border-color: rgba(124,58,237,.40);
+  background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.06));
+}
+
+.ph-pill{
+  display: inline-flex;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.14);
+  color: rgba(255,255,255,.72);
+}
+
+.ph-cardTitle{ margin: 10px 0 8px; font-size: 16px; }
+.ph-cardDesc{ margin: 0 0 12px; color: rgba(255,255,255,.65); font-size: 13px; line-height: 1.45; }
+.ph-cardLink{ font-weight: 700; color: rgba(255,255,255,.86); }
+
+@media (max-width: 980px){
+  .ph-card{ grid-column: span 6; }
+}
+@media (max-width: 620px){
+  .ph-card{ grid-column: span 12; }
+}

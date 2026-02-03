@@ -9,7 +9,8 @@ import {
 } from 'lucide-react'
 import ToolCard from '../components/ToolCard'
 import SEO from '../components/SEO'
-import ToolSearch from '../components/ToolSearch'
+import ToolsSearch from '../components/ToolsSearch'
+import ToolsGrid from '../components/ToolsGrid'
 
 export default function Home() {
     const tools = [
@@ -275,48 +276,34 @@ export default function Home() {
             />
             
             {/* HERO SECTION WITH ADVANCED SEARCH */}
-            <section className="hero">
-                <div className="hero-bg" aria-hidden="true"></div>
-                
-                <div className="hero-inner">
-                    <div className="badge">100% Free • Secure • Fast</div>
-                    
-                    <h1 className="hero-title">
-                        Every PDF Tool in One Place
-                        <span className="hero-sub">Merge, split, compress, convert, OCR & more</span>
-                    </h1>
-                    
-                    <ToolSearch />
-                    
-                    <div className="hero-cta">
-                        <a className="btn primary" href="#tools">Browse All Tools</a>
-                        <a className="btn ghost" href="/dashboard">Go to Dashboard</a>
+            <div className="ph-heroWrap">
+                <div className="ph-hero">
+                    <div className="ph-heroInner">
+                        <div className="badge">100% Free • Secure • Fast</div>
+                        
+                        <h1 className="ph-title">
+                            Every PDF Tool in One Place
+                            <span className="ph-sub">Merge, split, compress, convert, OCR & more</span>
+                        </h1>
+                        
+                        <ToolsSearch />
+                        
+                        <div className="hero-cta">
+                            <a className="btn primary" href="#tools">Browse All Tools</a>
+                            <a className="btn ghost" href="/dashboard">Go to Dashboard</a>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
             
             {/* TOOLS GRID SECTION */}
-            <section id="tools" className="tools">
+            <section id="tools" className="ph-section">
                 <div className="section-head">
                     <h2>Popular PDF Tools</h2>
                     <p>Click any tool. Use search to find instantly.</p>
                 </div>
                 
-                <div className="grid-container">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                        {tools.map((tool, index) => (
-                            <motion.div
-                                key={tool.path}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.3, delay: index * 0.05 }}
-                                viewport={{ once: true }}
-                            >
-                                <ToolCard {...tool} />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+                <ToolsGrid />
             </section>
 
             {/* Features Info Section */}
