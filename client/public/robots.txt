@@ -1,0 +1,7 @@
+﻿User-agent: *
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /signup/
+Allow: /
+
+Sitemap: https://pdfhero.in/sitemap.xml

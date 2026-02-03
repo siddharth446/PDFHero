@@ -8,6 +8,7 @@ import {
     FileArchive, Camera, ScanText, Crop, Layout, PenLine
 } from 'lucide-react'
 import ToolCard from '../components/ToolCard'
+import SEO from '../components/SEO'
 
 export default function Home() {
     const tools = [
@@ -213,8 +214,65 @@ export default function Home() {
         }
     ]
 
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PDFHero",
+        "url": "https://pdfhero.in/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://pdfhero.in/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    };
+
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PDFHero",
+        "url": "https://pdfhero.in/",
+        "logo": "https://pdfhero.in/assets/logo.png",
+        "sameAs": [
+            "https://twitter.com/pdfhero",
+            "https://www.linkedin.com/company/pdfhero"
+        ]
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pdfhero.in/" }
+        ]
+    };
+
     return (
-        <div>
+        <>
+            <SEO 
+                title="PDFHero - Advanced PDF Tools"
+                description="Free online PDF tools - Merge, split, compress, convert, and edit PDFs. 100% secure, no signup required."
+                canonical="https://pdfhero.in/"
+                ogTitle="PDFHero - Advanced PDF Tools"
+                ogDescription="Free online PDF tools - Merge, split, compress, convert, and edit PDFs. 100% secure, no signup required."
+                ogImage="https://pdfhero.in/assets/og/home.png"
+                twitterTitle="PDFHero - Advanced PDF Tools"
+                twitterDescription="Free online PDF tools - Merge, split, compress, convert, and edit PDFs."
+                twitterImage="https://pdfhero.in/assets/og/home.png"
+                schema={websiteSchema}
+            />
+            <SEO 
+                title="PDFHero - Advanced PDF Tools"
+                description="Free online PDF tools - Merge, split, compress, convert, and edit PDFs. 100% secure, no signup required."
+                canonical="https://pdfhero.in/"
+                schema={organizationSchema}
+            />
+            <SEO 
+                title="PDFHero - Advanced PDF Tools"
+                description="Free online PDF tools - Merge, split, compress, convert, and edit PDFs. 100% secure, no signup required."
+                canonical="https://pdfhero.in/"
+                schema={breadcrumbSchema}
+            />
+            <div>
             {/* Hero Section */}
             <section className="hero-gradient text-white section-padding">
                 <div className="container-custom">
@@ -286,7 +344,7 @@ export default function Home() {
 
                         <motion.div whileHover={{ scale: 1.05 }} className="text-center">
                             <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <Props className="w-8 h-8 text-green-600 dark:text-green-400" />
+                                <Briefcase className="w-8 h-8 text-green-600 dark:text-green-400" />
                             </div>
                             <h3 className="text-xl font-bold mb-3 dark:text-white">Premium Quality</h3>
                             <p className="text-gray-600 dark:text-gray-400">
@@ -297,25 +355,6 @@ export default function Home() {
                 </div>
             </section>
         </div>
-    )
-}
-
-function Props(props) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M12 2v20" />
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-        </svg>
+        </>
     )
 }
