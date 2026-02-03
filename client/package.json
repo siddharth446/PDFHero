@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "jest",
-    "test:e2e": "cypress open"
+    "test:e2e": "cypress open",
+    "postinstall": "echo Skipping postinstall for production build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
