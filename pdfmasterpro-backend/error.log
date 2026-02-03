@@ -1,0 +1,1 @@
+{"level":"error","message":"Supabase Connection Error: Could not find the table 'public.users' in the schema cache","timestamp":"2026-02-01T14:16:17.663Z"}

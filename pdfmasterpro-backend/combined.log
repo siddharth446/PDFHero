@@ -1,0 +1,9 @@
+{"level":"info","message":"Server running in development mode on port 5000","timestamp":"2026-02-01T14:16:16.512Z"}
+{"level":"error","message":"Supabase Connection Error: Could not find the table 'public.users' in the schema cache","timestamp":"2026-02-01T14:16:17.663Z"}
+{"level":"warn","message":"Note: If users table does not exist, please create it in Supabase Dashboard","timestamp":"2026-02-01T14:16:17.664Z"}
+{"level":"info","message":"Server running in development mode on port 5000","timestamp":"2026-02-01T14:32:45.430Z"}
+{"level":"info","message":"Supabase Connected Successfully","timestamp":"2026-02-01T14:32:46.802Z"}
+{"level":"info","message":"Server running in development mode on port 5006","timestamp":"2026-02-02T04:55:30.234Z"}
+{"level":"info","message":"Supabase Connected Successfully","timestamp":"2026-02-02T04:55:31.689Z"}
+{"level":"info","message":"Server running in development mode on port 5006","timestamp":"2026-02-02T06:27:02.289Z"}
+{"level":"info","message":"Supabase Connected Successfully","timestamp":"2026-02-02T06:27:03.739Z"}
